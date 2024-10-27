@@ -3,10 +3,10 @@ Este é um projeto feito utilizando apenas a linguagem de marcação HTML5 e a l
 
 O objetivo do projeto foi contemplar alguns conceitos de estilização, incluindo flexbox e media queries, sendo assim, feedbacks serão bem vindos.
 
-UNESC - Ciência da Computação - Profº Giácomo Antônio Atlhoff Bolan
-
 # Notas
 1. O site é responsivo para uma boa gama de resoluções, exceto para as quais o "width" é menor que 400px. 
+
+## UNESC - Ciência da Computação - Profº Giácomo Antônio Atlhoff Bolan
 
 # Autor
 ## Jean Vitor Vieira
