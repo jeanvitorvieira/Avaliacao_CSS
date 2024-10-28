@@ -1,5 +1,5 @@
 /* as propriedades/conceitos mais "complexos" estarão comentados */
-/* prioridade de utilização de "rem" e "%" para uma melhor responsividade */
+/* prioridade de utilização de "rem" e "%" para uma melhor responsividade*/
 
 * {
     margin: 0;
@@ -15,7 +15,7 @@ body {
     /* "flex-direction" sendo "column" para tratar a página como uma coluna */
     flex-direction: column;
     /* "gap" = distanciamento dos elementos */
-    gap: 1.6rem;
+    gap: 30px;
 }
 
 header {
@@ -42,7 +42,7 @@ header a {
 
 header ul {
     display: flex;
-    gap: 1.6rem;
+    gap: 30px;
     list-style: none;
 }
 
@@ -113,7 +113,7 @@ p {
 
     header ul {
         flex-direction: column;
-        gap: 1.2rem !important;
+        gap: 20px !important;
     }
 
     header ul li {
