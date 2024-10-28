@@ -1,5 +1,5 @@
 /* as propriedades/conceitos mais "complexos" estarão comentados */
-/* prioridade de utilização de "rem" e "%" para uma melhor responsividade*/
+/* prioridade de utilização de "rem" e "%" para uma melhor responsividade */
 
 * {
     margin: 0;
@@ -15,34 +15,33 @@ body {
     /* "flex-direction" sendo "column" para tratar a página como uma coluna */
     flex-direction: column;
     /* "gap" = distanciamento dos elementos */
-    gap: 30px;
+    gap: 2rem;
 }
 
 header {
     background-color: rgb(31, 31, 31);
-    width: 100%;
     display: flex;
     /* "align-items" definido como "center" faz o centralizamento vertical dos elementos que estarão nesse container */
     align-items: center;
     /* "justify-content" sendo "space-between" faz os elementos do container terem um certo espaço predefinido entre eles */
     justify-content: space-between;
     /* "padding" define a distância entre o elemento em si e as suas bordas */
-    padding: 2%;
+    padding: 2rem;
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 header a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 header ul {
     display: flex;
-    gap: 30px;
+    gap: 1.8rem;
     list-style: none;
 }
 
@@ -59,10 +58,10 @@ article {
     1 - "flex-grow": define quanto do espaço restante deve ser preenchido pelo elemento;
     2 - "flex-shrink": define o quão encolhido o elemento pode ficar;
     3 - "flex-basis": define o tamanho inicial de um elemento */
-    flex: 1 0 300px;
+    flex: 1 0 18.5rem;
     /* "max-width" define o tamanho máximo que um elemento pode alcançar */
     max-width: 50%;
-    padding: 1%;
+    padding: 1rem;
 }
 
 h3 {
@@ -84,7 +83,7 @@ p {
 }
 
 /* "media querie" utilizada para diminuir a fonte de "header a", que evita quebra de linha e sobreposição */
-@media (max-width: 730px) {
+@media (max-width: 830px) {
     header a {
         font-size: 1rem;
     }
@@ -94,34 +93,35 @@ p {
 1 - fazer o texto da "logo" e de "header a" crescerem;
 2 - adicionar um padding a navegação, para uma melhor visualização;
 3 - colocar a lista da navegação como uma coluna, e afastar um pouco seus respectivos elementos;
-4 - adicionar "background-color" aos elementos da lista;
-5 - diminuir o "padding-inline" da "section";
+4 - adicionar "background-color" e "padding" aos elementos da lista;
+5 - diminuir o "padding-inline" da "section", enquanto acrescenta um "gap";
 6 - ampliar o "max-width" de cada "article" */
 @media (max-width: 670px) {
     .logo {
         font-size: 4rem;
-        padding-left: 4%;
     }
 
     header a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     header nav {
-        padding: 3% 5% 5% 0;
+        padding-bottom: 1rem;
     }
 
     header ul {
         flex-direction: column;
-        gap: 20px !important;
+        gap: 1.2rem;
     }
 
     header ul li {
         background-color: gray;
+        padding: 5px;
     }
 
     section {
         padding-inline: 5%;
+        gap: 1rem;
     }
 
     article {
