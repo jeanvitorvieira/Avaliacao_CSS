@@ -1,22 +1,32 @@
+/* as propriedades/conceitos mais "complexos" estarão comentados */
+/* prioridade de utilização de "rem" e "%" para uma melhor responsividade */
+
 * {
     margin: 0;
     padding: 0;
+    /* "box sizing" definido como "border box" para a página acompanhar "height" e "width" conforme é redimensionada */
     box-sizing: border-box;
 }
 
 body {
     font-family: monospace;
+    /* "display" definido como "flex" para um melhor tratamento e disposição dos elementos da página */
     display: flex;
+    /* "flex-direction" sendo "column" para tratar a página como uma coluna */
     flex-direction: column;
-    gap: 30px;
+    /* "gap" = distanciamento dos elementos */
+    gap: 1.6rem;
 }
 
 header {
     background-color: rgb(31, 31, 31);
     width: 100%;
     display: flex;
+    /* "align-items" definido como "center" faz o centralizamento vertical dos elementos que estarão nesse container */
     align-items: center;
+    /* "justify-content" sendo "space-between" faz os elementos do container terem um certo espaço predefinido entre eles */
     justify-content: space-between;
+    /* "padding" define a distância entre o elemento em si e as suas bordas */
     padding: 2%;
 }
 
@@ -32,25 +42,33 @@ header a {
 
 header ul {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 1.6rem;
     list-style: none;
 }
 
 section {
     display: flex;
+    /* "flex-wrap" sendo utilizado como "wrap" serve para quebrar os elementos do container em linhas, não os deixando em uma única coluna/linha */
     flex-wrap: wrap;
-    padding: 0 10%;
+    /* "padding-inline" é parecido com "padding", porém a distância ocorre apenas nas laterais do elemento*/
+    padding-inline: 10%;
 }
 
 article {
+    /* "flex" tendo 3 valores se refere a: 
+    1 - "flex-grow": define quanto do espaço restante deve ser preenchido pelo elemento;
+    2 - "flex-shrink": define o quão encolhido o elemento pode ficar;
+    3 - "flex-basis": define o tamanho inicial de um elemento */
     flex: 1 0 300px;
+    /* "max-width" define o tamanho máximo que um elemento pode alcançar */
     max-width: 50%;
     padding: 1%;
 }
 
 h3 {
+    /* "text-align" definido como "center" faz o texto em questão ficar alinhado horizontalmente */
     text-align: center;
+    /* "margin" define a distância da borda do elemento ao resto do conteúdo da página */
     margin-top: 1%;
     font-size: 2.2rem;
 }
@@ -65,12 +83,20 @@ p {
     color: gray;
 }
 
+/* "media querie" utilizada para diminuir a fonte de "header a", que evita quebra de linha e sobreposição */
 @media (max-width: 730px) {
     header a {
         font-size: 1rem;
     }
 }
 
+/* "media querie" utilizada para algumas coisas, em ordem:
+1 - fazer o texto da "logo" e de "header a" crescerem;
+2 - adicionar um padding a navegação, para uma melhor visualização;
+3 - colocar a lista da navegação como uma coluna, e afastar um pouco seus respectivos elementos;
+4 - adicionar "background-color" aos elementos da lista;
+5 - diminuir o "padding-inline" da "section";
+6 - ampliar o "max-width" de cada "article" */
 @media (max-width: 670px) {
     .logo {
         font-size: 4rem;
@@ -87,7 +113,7 @@ p {
 
     header ul {
         flex-direction: column;
-        gap: 20px !important; 
+        gap: 1.2rem !important;
     }
 
     header ul li {
@@ -95,7 +121,7 @@ p {
     }
 
     section {
-        padding: 0 5%;
+        padding-inline: 5%;
     }
 
     article {
